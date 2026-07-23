@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Manager</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="master/master.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="todoBox">
+
+    <!-- ===== Header ===== -->
+
+    <div class="header">
+
+        <div class="logoCircle">
+            <i class="fa-solid fa-list-check"></i>
+        </div>
+
+        <h1>Task Manager</h1>
+
+        <p>Stay organized and finish more every day.</p>
+
+    </div>
+
+
+
+    <!-- ===== Input ===== -->
+
+    <div class="inputBox">
+
+        <input
+            type="text"
+            placeholder="What do you want to do today?">
+
+        <button id="add">
+            <i class="fa-solid fa-plus"></i>
+            Add
+        </button>
+
+        <button id="save" onclick="mysave()">
+            <i class="fa-solid fa-floppy-disk"></i>
+            Save
+        </button>
+
+    </div>
+
+
+
+    <!-- ===== Filter ===== -->
+
+    <div class="filterBox">
+
+        <label>
+            <i class="fa-solid fa-sliders"></i>
+            Filter Tasks
+        </label>
+
+        <div class="customSelect">
+
+            <button id="filterToggle">
+
+                <span id="selectedFilter">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                    All Tasks
+
+                </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+            <div id="filterMenu">
+
+                <div class="filterItem active" data-filter="all">
+                    <i class="fa-solid fa-layer-group"></i>
+                    All Tasks
+                </div>
+
+                <div class="filterItem" data-filter="active">
+                    <i class="fa-solid fa-bolt"></i>
+                    Active
+                </div>
+
+                <div class="filterItem" data-filter="done">
+                    <i class="fa-solid fa-circle-check"></i>
+                    Completed
+                </div>
+
+                <div class="filterItem" data-filter="important">
+                    <i class="fa-solid fa-gem"></i>
+                    Important
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+<!-- درصد پیشرفت  -->
+    <div class="progressBox">
+
+    <div class="progressText">
+        <span>Progress</span>
+        <span id="progressPercent">0%</span>
+    </div>
+
+    <div class="progress">
+        <div id="progressBar"></div>
+    </div>
+
+</div>
+
+    <!-- ===== Tasks ===== -->
+
+    <div id="container">
+
+    </div>
+
+</div>
+
+</div>
+
+
+
+
+
+<!-- ===== Undo ===== -->
+
+<div id="undoBox">
+
+    <span id="undoText">
+        Task deleted
+    </span>
+
+    <button id="undoBtn">
+        Undo
+    </button>
+
+</div>
+
+<div id="msg"></div>
+
+
+<footer class="footer">
+
+    <div class="footerProfile">
+
+        <img src="master/img/Screenshot_۲۰۲۶۰۶۱۰_۱۶۲۶۰۹_ChatGPT (3).jpg" alt="profile">
+
+
+        <div>
+            <h2>Zahra Khanezad</h2>
+            <p>Frontend Developer</p>
+        </div>
+
+    </div>
+
+
+    <div class="footerLinks">
+
+        <a href="https://github.com/zahraDiv" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+        </a>
+
+
+        <a href="https://www.linkedin.com/in/zahrakh-dev" title="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+
+        <a href="https://www.instagram.com/zahrakh__dev/" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+
+        <a href="mailto:Zahrakhanezad12@gmail.com" title="Email">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+
+    </div>
+
+    </div>
+
+
+</footer>
+
+<script src="master/app.js"></script>
+
+</body>
+
+</html>

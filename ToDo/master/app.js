@@ -44,6 +44,8 @@ if (tempLocal != undefined) {
 
 }
 
+updateProgress()
+
 function generateArt(temp) {
     const art = document.createElement('article')
 
